@@ -52,6 +52,12 @@ gsap.from('.up h3',{
     duration: 0.6
    
 })
+gsap.from('.up h1',{
+    y:'150%',
+    delay: 0.2,
+    duration: 0.6
+   
+})
 
 // mousefollower animation functoin
 function mouseFollower(){

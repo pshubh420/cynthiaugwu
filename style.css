@@ -13,6 +13,7 @@
     z-index: 999;
     transform: translate(50%, 50%);
     pointer-events: none;
+    scale: 0;
 
 }
 
@@ -103,8 +104,29 @@
     right: 3vw;
 }
 
-.page1 {
-    width: 100vw;
+
+.main {
     height: 100vh;
-    background-color: black
+    width: 100vw;
+    background-color: black;
+    padding: 0 3vw;
+    box-sizing: border-box;
+}
+
+.page1 {
+    padding-top: 28vh;
+}
+
+.hero_text {
+    font-family: General Sans Regular;
+    color: white;
+    font-size: 5vw;
+    font-weight: 300;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.second_hero_text {
+    display: inline-block;
+    margin-left: 20vw;
 }
