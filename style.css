@@ -99,7 +99,7 @@
 
 
 .menubt {
-    transition: all ease 0.2s;
+    /* transition: all ease 0.3s; */
     position: absolute;
     right: 3vw;
 }
@@ -114,19 +114,70 @@
 }
 
 .page1 {
+
+    height: 100%;
+    width: 100%;
     padding-top: 28vh;
+    position: relative;
+    color: white;
+    box-sizing: border-box;
 }
 
 .hero_text {
     font-family: General Sans Regular;
-    color: white;
     font-size: 5vw;
     font-weight: 300;
-    line-height: 1;
-    opacity: 0.8;
+    line-height: 0.9;
+    opacity: 0.6;
 }
 
 .second_hero_text {
     display: inline-block;
-    margin-left: 20vw;
+    margin-left: 10vw;
 }
+
+.down{
+    overflow: hidden;
+}
+
+#small{
+    text-align: end;
+   font-size: 1vw;
+}
+.hero_footer{
+    width: 100%;
+    font-size: 1vw;
+    opacity: 1;
+    position: absolute;
+    bottom: 20px;
+}
+
+.right_text{
+    text-align: right;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.footer_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow{
+    background-color: gray;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    overflow: hidden;
+}
+
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
