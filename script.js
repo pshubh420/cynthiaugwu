@@ -126,3 +126,60 @@ function arrow(){
     })
 }
 arrow()
+
+//page2 text hover and animations
+
+function page2Animation(){
+    let divs= document.querySelectorAll('.page2_text')
+    
+    divs.forEach((i)=>{
+        let text = i.querySelector('h1')
+        let image = i.querySelector('img')
+        let circle = document.querySelector('.circle')
+        i.addEventListener('mouseenter', (dets)=>{
+            gsap.to(text,{
+                x:40,
+                opacity: 0.4
+            })
+            
+
+        })
+        i.addEventListener('mouseleave',()=>{
+            gsap.to(text,{
+                x:0,
+                opacity:1
+            })
+
+            gsap.to(image,{
+                opacity:0
+            })
+
+            gsap.to(circle,{
+                clearPropes: 'opacity '
+
+            })
+        })
+
+
+        i.addEventListener('mousemove',(dets)=>{
+            let diff = i.getBoundingClientRect()
+            let x = (dets.clientX - diff.left)-(image.offsetWidth/2)
+            let y = (dets.clientY - diff.top) - (image.offsetHeight/2)
+            
+
+            gsap.to(circle,{
+                opacity:0.8,
+                scale:10
+            })
+            
+            gsap.to(image,{
+                y: y,
+                x:x,
+                opacity:1
+            })
+
+            gsap.to()
+        })
+    })
+}
+page2Animation()

@@ -4,6 +4,13 @@
     font-family: General Sans Medium;
 }
 
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
 .circle{
     position: fixed;
     height: 10px;
@@ -11,7 +18,7 @@
     border-radius: 50%;
     background-color: #fff;
     z-index: 999;
-    transform: translate(50%, 50%);
+    /* transform: translate(50%, 50%); */
     pointer-events: none;
     scale: 0;
 
@@ -30,6 +37,7 @@
     position: relative;
     padding: 3vw;
     box-sizing: border-box;
+    background-color: black;
     overflow: hidden;
 
     
@@ -111,13 +119,14 @@
     background-color: black;
     padding: 0 3vw;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .page1 {
 
     height: 100%;
     width: 100%;
-    padding-top: 28vh;
+    padding-top : 28vh;
     position: relative;
     color: white;
     box-sizing: border-box;
@@ -136,6 +145,10 @@
     margin-left: 10vw;
 }
 
+#relative{
+    position: relative;
+}
+
 .down{
     overflow: hidden;
 }
@@ -150,6 +163,7 @@
     opacity: 1;
     position: absolute;
     bottom: 20px;
+    
 }
 
 .right_text{
@@ -180,4 +194,28 @@
     gap: 5px;
 }
 
+.page2{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0 3vw;
+    background-color: black;
+}
 
+.page2_text{
+    font-size: 4vw;
+    padding: 2vw;
+    border-bottom: 2px solid white;
+    position: relative;
+    color: white;
+}
+
+.page2_text img{
+    height: 20vw;
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
