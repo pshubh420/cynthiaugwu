@@ -9,6 +9,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+body{
+    background-color: black;
+}
+
 
 
 .circle{
@@ -209,6 +213,7 @@ body::-webkit-scrollbar {
 }
 
 .page2{
+    margin-top: 10vh;
     height: 100vh;
     width: 100vw;
     box-sizing: border-box;
@@ -218,11 +223,16 @@ body::-webkit-scrollbar {
 }
 
 .page2_text{
-    font-size: 4vw;
+    font-size: 3.6vw;
     padding: 2vw;
     border-bottom: 2px solid white;
     position: relative;
     color: white;
+    opacity: 0.6;
+}
+
+.page2main {
+    border-top: 2px solid gray;
 }
 
 .page2_text img{
@@ -233,3 +243,95 @@ body::-webkit-scrollbar {
     opacity: 0;
     pointer-events: none;
 }
+
+.page3 .empty {
+ min-width: 40vw;
+}
+
+.page3{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.page3_flex {
+    gap: 2vw;
+    display: flex;
+}
+
+.page3_flex div{
+    width: 32vw;
+    font-size: 1.2vw;
+    line-height: 1.5;
+    
+}
+
+.page3_flex div h5{
+    color: gray;
+}
+
+.page3_flex div p{
+    color: white;
+}
+
+.page3 img{
+    height: 17vw;
+}
+
+.page3_flex div button{
+    margin-top: 10px;
+    padding: 7px 15px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    outline: none;
+    font-size: 15px;
+    text-transform: capitalize;
+    transition: all ease 0.4s;
+}
+
+.page3_flex div button:hover {
+    background-color: white;
+    color: black;
+}
+
+.footer {
+    padding: 0 3vw;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
+.footer_text{
+    line-height: 1.5;
+}
+
+.footer_text h5{
+    opacity: 0.6;
+}
+
+.footer_text .logo{
+    display: inline-block;
+}
+.footer_nav{
+    margin-top: 15vh;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_nav .time{
+    display: flex;
+    gap: 25px;
+}
+.footer_menu{
+    display: flex;
+    gap: 20px;
+}
+.footer_nav a {
+    text-decoration: none;
+    color: white;
+}
+

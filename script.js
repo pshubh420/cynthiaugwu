@@ -147,7 +147,7 @@ function page2Animation() {
 
             gsap.to(text, {
                 x: 40,
-                opacity: 0.4
+                opacity: 0.2
             })
 
 
@@ -157,7 +157,7 @@ function page2Animation() {
         i.addEventListener('mouseleave', () => {
             gsap.to(text, {
                 x: 0,
-                opacity: 1
+                opacity: 0.6
             })
 
             gsap.to(image, {
@@ -178,7 +178,7 @@ function page2Animation() {
             
 
             let diff = i.getBoundingClientRect()
-            console.log(big_circle.offsetHeight/2,big_circle.offsetWidth/2)
+            // console.log(big_circle.offsetHeight/2,big_circle.offsetWidth/2)
             
             let y = (dets.clientY - diff.top) - (image.offsetHeight/2)
             let x = (dets.clientX - diff.left) - (image.offsetWidth/2)
@@ -204,3 +204,58 @@ function page2Animation() {
     })
 }
 page2Animation()
+
+//scroll animation
+function scrollAnimation(){
+        let divUp = document.querySelector('.page2main')
+        gsap.from(divUp,{
+            y:'35%',
+            duration:1,
+            ease:'power2',
+            scrollTrigger: {
+                trigger: '.page2main',
+                // markers:true,
+            },
+        })
+
+
+        let page3text = document.querySelector('#page3text')
+        gsap.from(page3text,{
+            opacity:0,
+            duration:1,
+            scrollTrigger:{
+                trigger: page3text,
+                start: 'top 85%',
+                // markers:true,
+                
+            }
+        })
+}
+scrollAnimation()
+
+//time
+function time(){
+    setInterval(() => {
+    let amPm;
+    let date = new Date()
+    let hour = date.getHours()
+    let minuts = date.getMinutes()
+    // console.log(hour,minuts)
+
+    let time = document.querySelector('.time p:nth-child(2)')
+    console.log(time)
+
+
+    if (hour < 13){
+        amPm = 'am'
+    }
+    else if(hour>=13){
+        amPm = 'pm'
+        hour = hour - 12
+
+    }
+
+        time.innerHTML = `${hour}:${minuts} \xa0 ${amPm}`
+    }, 1000);
+}
+time()
