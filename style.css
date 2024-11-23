@@ -47,7 +47,13 @@ body{
     z-index: 10;
     width: 100%;
     color: white;
+    font-size: 1rem;
 }
+
+
+
+
+
 
 .nav{
     display: flex;
@@ -70,7 +76,7 @@ body{
 
     .cap {
         text-transform: uppercase;
-        font-size: 1vw;
+        /* font-size: 1vw; */
     }
 
     .up {
@@ -131,6 +137,8 @@ body{
 }
 
 
+
+
 .main {
     height: 100vh;
     width: 100vw;
@@ -158,6 +166,17 @@ body{
     opacity: 0.6;
 }
 
+@media only screen and (max-width: 400px) {
+
+    .hero_text {
+        font-size: 8vw;
+        line-height: 1.2;
+    }
+
+   
+
+}
+
 .second_hero_text {
     display: inline-block;
     margin-left: 10vw;
@@ -169,6 +188,7 @@ body{
 
 .down{
     overflow: hidden;
+    font-size: 1rem;
 }
 
 #small{
@@ -189,6 +209,30 @@ body{
     line-height: 2;
     margin-bottom: 40px;
 }
+
+@media only screen and (max-width: 400px) {
+    
+    .hero_footer{
+        margin-top: 20vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .right_text{
+        text-align: center;
+    }
+    .footer_flex{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #small {
+        font-size: 4vw;
+    }
+  }
 
 .footer_flex{
     display: flex;
@@ -235,6 +279,27 @@ body{
     border-top: 2px solid gray;
 }
 
+@media only screen and (max-width : 400px){
+
+    .page2 {
+        height: auto;
+        margin-bottom: 5vh;
+    }
+
+    .page2_text {
+        font-size: 6vw;
+        margin-bottom: 4vh;
+    }
+
+    .page2main {
+        padding-top: 4vh;
+    }
+}
+
+.page2main {
+    border-top: 2px solid gray;
+}
+
 .page2_text img{
     height: 20vw;
     position: absolute;
@@ -254,6 +319,8 @@ body{
     display: flex;
     align-items: center;
 }
+
+
 
 .page3_flex {
     gap: 2vw;
@@ -290,6 +357,46 @@ body{
     font-size: 15px;
     text-transform: capitalize;
     transition: all ease 0.4s;
+}
+
+
+@media only screen and (max-width : 400px){
+    .page3{
+        /* background-color: red; */
+        justify-content: center;   
+        height: auto;
+        margin-bottom: 5vh;
+    }
+
+    .empty {
+        display: none;
+    }
+
+    .page3_flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+
+    .page3_flex img {
+        height: 35vw;
+    }
+
+    #page3text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        font-size: 0.5rem;
+        gap: 1vh;
+    }
+
+    #page3text button {
+        font-size: 0.6rem;
+    }
+
+
 }
 
 .page3_flex div button:hover {
@@ -333,5 +440,20 @@ body{
 .footer_nav a {
     text-decoration: none;
     color: white;
+}
+
+
+@media only screen and (max-width : 400px) {
+    .footer_nav 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer_menu{
+        font-size: 0.7rem;
+    }
 }
 
