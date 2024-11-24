@@ -272,7 +272,7 @@ setTimeout(()=>{
 
 
     if (screen.width <= screenSize ){
-        let time = 500
+        let time = 200
         item.forEach((i) => {
             let c = document.createElement("div")
        function linestart() {
