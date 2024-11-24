@@ -265,8 +265,8 @@ function time(){
 }
 time()
 
-function mobileAnimation(x){
-    if (x.matches ){
+function mobileAnimation(){
+    if (screen.width <= screenSize ){
         item.forEach((i) => {
             let c = document.createElement("div")
        function linestart() {
@@ -297,6 +297,6 @@ function mobileAnimation(x){
     }
 }
 
-x.addEventListener("change", function() {
-    mobileAnimation(x);
-  });
+// x.addEventListener("change", function() {
+//     mobileAnimation(x);
+//   });
