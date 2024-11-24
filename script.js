@@ -109,7 +109,7 @@ function mouseFollower() {
         })
     })
 }
-mouseFollower()
+
 
 //arrow animation 
 function arrow() {
@@ -267,7 +267,7 @@ time()
 
 function mobileAnimation(){
 
-setTimeout(()=>{
+
 
 
 
@@ -304,10 +304,13 @@ setTimeout(()=>{
     })
 
     }
-},1500)
+
 }
 
+
+setTimeout(()=>{
 mobileAnimation()
+},1500)
 
 // x.addEventListener("change", function() {
 //     mobileAnimation(x);
