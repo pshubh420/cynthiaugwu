@@ -266,13 +266,22 @@ function time(){
 time()
 
 function mobileAnimation(){
+
+setTimeout(()=>{
+
+
+
     if (screen.width <= screenSize ){
+        let time = 500
         item.forEach((i) => {
             let c = document.createElement("div")
        function linestart() {
             c.className = 'border'
             c.style.animationName = 'full'
-            i.appendChild(c)
+            setTimeout(()=>{
+
+                i.appendChild(c)
+            }, time+=200)
     
     
         }
@@ -283,19 +292,22 @@ function mobileAnimation(){
             setTimeout(()=>{
 
                 c.style.animationName = 'zero'
-            },200)
+            },3500)
 
 
             setTimeout(() => {
                 console.log(i)
                 i.removeChild(c)
-            }, 500)
+            }, 4900)
         }
         lineend()
     })
 
     }
+},1800)
 }
+
+mobileAnimation()
 
 // x.addEventListener("change", function() {
 //     mobileAnimation(x);
