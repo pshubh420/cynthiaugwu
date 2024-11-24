@@ -2,13 +2,18 @@ let item = document.querySelectorAll('.logo')
 let dot = document.querySelector('.circle')
 let div = document.createElement('div')
 let tl = gsap.timeline()
+let screenSize = 400
+let x = window.matchMedia(`(max-width : ${400}px)`)
+console.log(x)
 
 item.forEach((i) => {
     //getting everyElement with class name .logo and passing everyElement to function animation
     // console.log(value)
-    animation(i)
+    animation(i) 
+    
 
 })
+
 // bottom border animation
 function animation(i) {
     // running eventlistner on everyElement inside the nodelist "item"
@@ -243,7 +248,7 @@ function time(){
     // console.log(hour,minuts)
 
     let time = document.querySelector('.time p:nth-child(2)')
-    console.log(time)
+    // console.log(time)
 
 
     if (hour < 13){
@@ -259,3 +264,39 @@ function time(){
     }, 1000);
 }
 time()
+
+function mobileAnimation(x){
+    if (x.matches ){
+        item.forEach((i) => {
+            let c = document.createElement("div")
+       function linestart() {
+            c.className = 'border'
+            c.style.animationName = 'full'
+            i.appendChild(c)
+    
+    
+        }
+        linestart()
+    
+        function lineend() {
+
+            setTimeout(()=>{
+
+                c.style.animationName = 'zero'
+            },200)
+
+
+            setTimeout(() => {
+                console.log(i)
+                i.removeChild(c)
+            }, 500)
+        }
+        lineend()
+    })
+
+    }
+}
+
+x.addEventListener("change", function() {
+    mobileAnimation(x);
+  });
