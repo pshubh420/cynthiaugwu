@@ -300,11 +300,11 @@ setTimeout(()=>{
                 i.removeChild(c)
             }, 4900)
         }
-        lineend()
+        // lineend()
     })
 
     }
-},1800)
+},1500)
 }
 
 mobileAnimation()
