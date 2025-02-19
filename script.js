@@ -110,6 +110,8 @@ function mouseFollower() {
     })
 }
 
+mouseFollower()
+
 
 //arrow animation 
 function arrow() {
